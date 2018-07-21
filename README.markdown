@@ -1,34 +1,30 @@
-# PromiseKit CoreLocation Extensions ![Build Status]
+# PromiseKit HomeKit Extensions ![Build Status]
 
-This project adds promises to Apple’s MapKit framework.
+This project adds promises to Apple’s HomeKit framework.
 
 ## CocoaPods
 
-```ruby
-pod "PromiseKit/CoreLocation", "~> 6.0"
-```
-
-The extensions are built into `PromiseKit.framework` thus nothing else is needed.
+Not currently available
 
 ## Carthage
 
 ```ruby
-github "PromiseKit/CoreLocation" ~> 3.0
+github "chrischares/PromiseKit-HomeKit" ~> 1.0
 ```
 
-The extensions are built into their own framework:
+The extension is built into it's own framework:
 
 ```swift
 // swift
 import PromiseKit
-import PMKCoreLocation
+import PMKHomeKit
 ```
 
 ```objc
 // objc
 @import PromiseKit;
-@import PMKCoreLocation;
+@import PMKHomeKit;
 ```
 
 
-[Build Status]: https://travis-ci.org/PromiseKit/CoreLocation.svg?branch=master
+[Build Status]: https://travis-ci.org/chrischares/PromiseKit-HomeKit.svg?branch=master
