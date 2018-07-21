@@ -16,7 +16,7 @@
 		63199F161D5FF7B9007E8A0E /* CLGeocoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */; };
 		63199F171D5FF7B9007E8A0E /* CLLocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */; };
 		6358AB7A1D5D4B6700B9B157 /* PMKCoreLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6358AB791D5D4B6700B9B157 /* PMKCoreLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63C7FFF71D5C020D003BAE60 /* PMKCoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKCoreLocation.framework */; };
+		63C7FFF71D5C020D003BAE60 /* PMKHomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 		63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLLocationManagerTests.swift; path = Tests/CLLocationManagerTests.swift; sourceTree = SOURCE_ROOT; };
 		6358AB791D5D4B6700B9B157 /* PMKCoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMKCoreLocation.h; path = Sources/PMKCoreLocation.h; sourceTree = SOURCE_ROOT; };
 		63C700091D5C0253003BAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63C7FFA71D5BEE09003BAE60 /* PMKCoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMKCoreLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63C7FFF21D5C020D003BAE60 /* PMKCLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKCLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMKHomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CCF8121D5C0C4E00503216 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		63CCF8171D5C11B500503216 /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C7FFF71D5C020D003BAE60 /* PMKCoreLocation.framework in Frameworks */,
+				63C7FFF71D5C020D003BAE60 /* PMKHomeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,8 +80,8 @@
 		63C7FFA81D5BEE09003BAE60 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				63C7FFA71D5BEE09003BAE60 /* PMKCoreLocation.framework */,
-				63C7FFF21D5C020D003BAE60 /* PMKCLTests.xctest */,
+				63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */,
+				63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,9 +125,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63C7FFA61D5BEE09003BAE60 /* PMKCoreLocation */ = {
+		63C7FFA61D5BEE09003BAE60 /* PMKHomeKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C7FFAF1D5BEE09003BAE60 /* Build configuration list for PBXNativeTarget "PMKCoreLocation" */;
+			buildConfigurationList = 63C7FFAF1D5BEE09003BAE60 /* Build configuration list for PBXNativeTarget "PMKHomeKit" */;
 			buildPhases = (
 				63C7FFA21D5BEE09003BAE60 /* Sources */,
 				63C7FFA31D5BEE09003BAE60 /* Frameworks */,
@@ -137,14 +137,14 @@
 			);
 			dependencies = (
 			);
-			name = PMKCoreLocation;
+			name = PMKHomeKit;
 			productName = "PMK+UIKit";
-			productReference = 63C7FFA71D5BEE09003BAE60 /* PMKCoreLocation.framework */;
+			productReference = 63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		63C7FFF11D5C020D003BAE60 /* PMKCLTests */ = {
+		63C7FFF11D5C020D003BAE60 /* PMKHKTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKCLTests" */;
+			buildConfigurationList = 63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKHKTests" */;
 			buildPhases = (
 				63C7FFEE1D5C020D003BAE60 /* Sources */,
 				63C7FFEF1D5C020D003BAE60 /* Frameworks */,
@@ -155,9 +155,9 @@
 			dependencies = (
 				63C7FFF91D5C020D003BAE60 /* PBXTargetDependency */,
 			);
-			name = PMKCLTests;
+			name = PMKHKTests;
 			productName = PMKTests/NS;
-			productReference = 63C7FFF21D5C020D003BAE60 /* PMKCLTests.xctest */;
+			productReference = 63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 63C7FFA11D5BEE09003BAE60 /* Build configuration list for PBXProject "PMKCoreLocation" */;
+			buildConfigurationList = 63C7FFA11D5BEE09003BAE60 /* Build configuration list for PBXProject "PMKHomeKit" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -194,8 +194,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				63C7FFA61D5BEE09003BAE60 /* PMKCoreLocation */,
-				63C7FFF11D5C020D003BAE60 /* PMKCLTests */,
+				63C7FFA61D5BEE09003BAE60 /* PMKHomeKit */,
+				63C7FFF11D5C020D003BAE60 /* PMKHKTests */,
 			);
 		};
 /* End PBXProject section */
@@ -244,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		63C7FFF91D5C020D003BAE60 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 63C7FFA61D5BEE09003BAE60 /* PMKCoreLocation */;
+			target = 63C7FFA61D5BEE09003BAE60 /* PMKHomeKit */;
 			targetProxy = 63C7FFF81D5C020D003BAE60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -440,7 +440,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		63C7FFA11D5BEE09003BAE60 /* Build configuration list for PBXProject "PMKCoreLocation" */ = {
+		63C7FFA11D5BEE09003BAE60 /* Build configuration list for PBXProject "PMKHomeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C7FFAD1D5BEE09003BAE60 /* Debug */,
@@ -449,7 +449,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C7FFAF1D5BEE09003BAE60 /* Build configuration list for PBXNativeTarget "PMKCoreLocation" */ = {
+		63C7FFAF1D5BEE09003BAE60 /* Build configuration list for PBXNativeTarget "PMKHomeKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C7FFB01D5BEE09003BAE60 /* Debug */,
@@ -458,7 +458,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKCLTests" */ = {
+		63C7FFFA1D5C020D003BAE60 /* Build configuration list for PBXNativeTarget "PMKHKTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				63C7FFFB1D5C020D003BAE60 /* Debug */,
