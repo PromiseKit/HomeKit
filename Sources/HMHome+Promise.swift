@@ -13,7 +13,7 @@ extension HMHome {
     
 #if !os(tvOS) && swift(>=3.2)
     /// Add and setup a new HMAccessory.  Displays it's own UI
-    @available(iOS 11.3, OSX 10.13, watchOS 4.0, *)
+    @available(iOS 11.3, *)
     public func addAndSetupAccessories(with payload: HMAccessorySetupPayload) -> Promise<[HMAccessory]> {
         return Promise { seal in
             self.addAndSetupAccessories(with: payload, completionHandler: seal.resolve)

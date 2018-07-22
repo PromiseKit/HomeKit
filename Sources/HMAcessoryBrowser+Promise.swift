@@ -10,7 +10,8 @@ public class HMPromiseAccessoryBrowser {
     private var proxy: BrowserProxy?
 
     public func start(scanInterval: ScanInterval) -> Promise<[HMAccessory]> {
-        return BrowserProxy(scanInterval: scanInterval).promise
+        proxy = BrowserProxy(scanInterval: scanInterval)
+        return proxy!.promise
     }
     
     public func stop() {
