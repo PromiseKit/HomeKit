@@ -1,11 +1,3 @@
-//
-//  HMAcessoryBrowser+Promise.swift
-//  Onboarding
-//
-//  Created by Chris Chares on 6/29/18.
-//  Copyright © 2018 Hunter Douglas. All rights reserved.
-//
-
 import Foundation
 import HomeKit
 import PromiseKit

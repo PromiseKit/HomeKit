@@ -1,11 +1,3 @@
-//
-//  PromiseProxy.swift
-//  HDSDK
-//
-//  Created by Chris Chares on 7/16/18.
-//  Copyright © 2018 Hunter Douglas. All rights reserved.
-//
-
 import PromiseKit
 
 /**

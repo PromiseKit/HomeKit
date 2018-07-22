@@ -7,15 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63199F0C1D5FF25C007E8A0E /* CLGeocoder+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 63199F061D5FF25C007E8A0E /* CLGeocoder+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63199F0D1D5FF25C007E8A0E /* CLGeocoder+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 63199F071D5FF25C007E8A0E /* CLGeocoder+AnyPromise.m */; };
-		63199F0E1D5FF25C007E8A0E /* CLGeocoder+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F081D5FF25C007E8A0E /* CLGeocoder+Promise.swift */; };
-		63199F0F1D5FF25C007E8A0E /* CLLocationManager+AnyPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 63199F091D5FF25C007E8A0E /* CLLocationManager+AnyPromise.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		63199F101D5FF25C007E8A0E /* CLLocationManager+AnyPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = 63199F0A1D5FF25C007E8A0E /* CLLocationManager+AnyPromise.m */; };
-		63199F111D5FF25C007E8A0E /* CLLocationManager+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F0B1D5FF25C007E8A0E /* CLLocationManager+Promise.swift */; };
 		63199F161D5FF7B9007E8A0E /* CLGeocoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */; };
 		63199F171D5FF7B9007E8A0E /* CLLocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */; };
-		6358AB7A1D5D4B6700B9B157 /* PMKCoreLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6358AB791D5D4B6700B9B157 /* PMKCoreLocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63C7FFF71D5C020D003BAE60 /* PMKHomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */; };
 		838C29D32103FB9700CE5309 /* HMAcessoryBrowser+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CE2103FB9600CE5309 /* HMAcessoryBrowser+Promise.swift */; };
 		838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */; };
@@ -35,15 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63199F061D5FF25C007E8A0E /* CLGeocoder+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLGeocoder+AnyPromise.h"; path = "Sources/CLGeocoder+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
-		63199F071D5FF25C007E8A0E /* CLGeocoder+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLGeocoder+AnyPromise.m"; path = "Sources/CLGeocoder+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
-		63199F081D5FF25C007E8A0E /* CLGeocoder+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLGeocoder+Promise.swift"; path = "Sources/CLGeocoder+Promise.swift"; sourceTree = SOURCE_ROOT; };
-		63199F091D5FF25C007E8A0E /* CLLocationManager+AnyPromise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CLLocationManager+AnyPromise.h"; path = "Sources/CLLocationManager+AnyPromise.h"; sourceTree = SOURCE_ROOT; };
-		63199F0A1D5FF25C007E8A0E /* CLLocationManager+AnyPromise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CLLocationManager+AnyPromise.m"; path = "Sources/CLLocationManager+AnyPromise.m"; sourceTree = SOURCE_ROOT; };
-		63199F0B1D5FF25C007E8A0E /* CLLocationManager+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CLLocationManager+Promise.swift"; path = "Sources/CLLocationManager+Promise.swift"; sourceTree = SOURCE_ROOT; };
 		63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLGeocoderTests.swift; path = Tests/CLGeocoderTests.swift; sourceTree = SOURCE_ROOT; };
 		63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLLocationManagerTests.swift; path = Tests/CLLocationManagerTests.swift; sourceTree = SOURCE_ROOT; };
-		6358AB791D5D4B6700B9B157 /* PMKCoreLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PMKCoreLocation.h; path = Sources/PMKCoreLocation.h; sourceTree = SOURCE_ROOT; };
 		63C700091D5C0253003BAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMKHomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,13 +90,6 @@
 				838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */,
 				838C29D12103FB9700CE5309 /* HMHomeManager+Promise.swift */,
 				838C29D22103FB9700CE5309 /* PromiseProxy.swift */,
-				6358AB791D5D4B6700B9B157 /* PMKCoreLocation.h */,
-				63199F061D5FF25C007E8A0E /* CLGeocoder+AnyPromise.h */,
-				63199F071D5FF25C007E8A0E /* CLGeocoder+AnyPromise.m */,
-				63199F081D5FF25C007E8A0E /* CLGeocoder+Promise.swift */,
-				63199F091D5FF25C007E8A0E /* CLLocationManager+AnyPromise.h */,
-				63199F0A1D5FF25C007E8A0E /* CLLocationManager+AnyPromise.m */,
-				63199F0B1D5FF25C007E8A0E /* CLLocationManager+Promise.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -131,9 +110,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63199F0F1D5FF25C007E8A0E /* CLLocationManager+AnyPromise.h in Headers */,
-				63199F0C1D5FF25C007E8A0E /* CLGeocoder+AnyPromise.h in Headers */,
-				6358AB7A1D5D4B6700B9B157 /* PMKCoreLocation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,15 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63199F0E1D5FF25C007E8A0E /* CLGeocoder+Promise.swift in Sources */,
 				838C29D62103FB9700CE5309 /* HMHomeManager+Promise.swift in Sources */,
 				838C29D52103FB9700CE5309 /* HMCharacteristic+Promise.swift in Sources */,
 				838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */,
 				838C29D32103FB9700CE5309 /* HMAcessoryBrowser+Promise.swift in Sources */,
-				63199F101D5FF25C007E8A0E /* CLLocationManager+AnyPromise.m in Sources */,
 				838C29D72103FB9700CE5309 /* PromiseProxy.swift in Sources */,
-				63199F0D1D5FF25C007E8A0E /* CLGeocoder+AnyPromise.m in Sources */,
-				63199F111D5FF25C007E8A0E /* CLLocationManager+Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
