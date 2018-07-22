@@ -14,7 +14,7 @@
 		838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */; };
 		838C29D52103FB9700CE5309 /* HMCharacteristic+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29D02103FB9700CE5309 /* HMCharacteristic+Promise.swift */; };
 		838C29D62103FB9700CE5309 /* HMHomeManager+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29D12103FB9700CE5309 /* HMHomeManager+Promise.swift */; };
-		838C29D72103FB9700CE5309 /* PromiseProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29D22103FB9700CE5309 /* PromiseProxy.swift */; };
+		838C29D72103FB9700CE5309 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29D22103FB9700CE5309 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMHome+Promise.swift"; sourceTree = "<group>"; };
 		838C29D02103FB9700CE5309 /* HMCharacteristic+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMCharacteristic+Promise.swift"; sourceTree = "<group>"; };
 		838C29D12103FB9700CE5309 /* HMHomeManager+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMHomeManager+Promise.swift"; sourceTree = "<group>"; };
-		838C29D22103FB9700CE5309 /* PromiseProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseProxy.swift; sourceTree = "<group>"; };
+		838C29D22103FB9700CE5309 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 				838C29CE2103FB9600CE5309 /* HMAcessoryBrowser+Promise.swift */,
 				838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */,
 				838C29D12103FB9700CE5309 /* HMHomeManager+Promise.swift */,
-				838C29D22103FB9700CE5309 /* PromiseProxy.swift */,
+				838C29D22103FB9700CE5309 /* Utils.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -218,7 +218,7 @@
 				838C29D52103FB9700CE5309 /* HMCharacteristic+Promise.swift in Sources */,
 				838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */,
 				838C29D32103FB9700CE5309 /* HMAcessoryBrowser+Promise.swift in Sources */,
-				838C29D72103FB9700CE5309 /* PromiseProxy.swift in Sources */,
+				838C29D72103FB9700CE5309 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
