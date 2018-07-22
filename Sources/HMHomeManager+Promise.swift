@@ -2,6 +2,10 @@ import Foundation
 import PromiseKit
 import HomeKit
 
+public enum HomeKitError: Error {
+    case permissionDeined
+}
+
 extension HMHomeManager {
     public func homes() -> Promise<[HMHome]> {
         return HMHomeManagerProxy().promise
@@ -26,8 +30,6 @@ extension HMHomeManager {
     }
 }
 
-fileprivate let timeout = 5.0
-
 internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate {
     
     fileprivate let manager: HMHomeManager
@@ -37,8 +39,8 @@ internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate
         super.init()
         self.manager.delegate = self
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + timeout) { [weak self] in
-            self?.fulfill([])
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) { [weak self] in
+            self?.reject(HomeKitError.permissionDeined)
         }
     }
     

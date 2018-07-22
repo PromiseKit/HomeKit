@@ -10,29 +10,30 @@ internal class PromiseProxy<T>: NSObject {
 
     override init() {
         super.init()
-        // Create the retain cycle
+        // Create a retain cycle
         self.retainCycle = self
-        // And ensure we break it
+        // And ensure we break it when the promise is resolved
         _ = promise.ensure { self.retainCycle = nil }
     }
     
     /// These functions ensure we only resolve the promise once
-    func fulfill(_ value: T) {
+    internal func fulfill(_ value: T) {
         guard self.promise.isResolved == false else { return }
         seal.fulfill(value)
     }
-    func reject(_ error: Error) {
+    internal func reject(_ error: Error) {
         guard self.promise.isResolved == false else { return }
         seal.reject(error)
     }
     
-    func cancel() {
+    /// Cancel helper
+    internal func cancel() {
         self.reject(PMKError.cancelled)
     }
 }
 
-/*
-    Commonly used intervals for scanning
+/**
+    Different ways to scan.
 */
 public enum ScanInterval {
     // Return after our first item with an optional time limit
