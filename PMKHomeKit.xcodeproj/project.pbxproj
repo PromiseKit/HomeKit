@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63199F161D5FF7B9007E8A0E /* CLGeocoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */; };
-		63199F171D5FF7B9007E8A0E /* CLLocationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */; };
 		63C7FFF71D5C020D003BAE60 /* PMKHomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */; };
 		838C29D32103FB9700CE5309 /* HMAcessoryBrowser+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CE2103FB9600CE5309 /* HMAcessoryBrowser+Promise.swift */; };
 		838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */; };
@@ -28,8 +26,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLGeocoderTests.swift; path = Tests/CLGeocoderTests.swift; sourceTree = SOURCE_ROOT; };
-		63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CLLocationManagerTests.swift; path = Tests/CLLocationManagerTests.swift; sourceTree = SOURCE_ROOT; };
 		63C700091D5C0253003BAE60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PMKHomeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +93,6 @@
 		63C7FFF31D5C020D003BAE60 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				63199F141D5FF7B9007E8A0E /* CLGeocoderTests.swift */,
-				63199F151D5FF7B9007E8A0E /* CLLocationManagerTests.swift */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
@@ -226,8 +220,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63199F161D5FF7B9007E8A0E /* CLGeocoderTests.swift in Sources */,
-				63199F171D5FF7B9007E8A0E /* CLLocationManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
