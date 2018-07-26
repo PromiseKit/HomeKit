@@ -10,8 +10,6 @@ extension HMHome {
         }
     }
     
-    
-#if !os(tvOS) && swift(>=3.2)
     /// Add and setup a new HMAccessory.  Displays it's own UI
     @available(iOS 11.3, *)
     public func addAndSetupAccessories(with payload: HMAccessorySetupPayload) -> Promise<[HMAccessory]> {
@@ -19,11 +17,9 @@ extension HMHome {
             self.addAndSetupAccessories(with: payload, completionHandler: seal.resolve)
         }
     }
-#endif
 
-#if !os(tvOS) && swift(>=3.2)
     /// Add and setup a new HMAccessory.  Displays it's own UI
-    @available(iOS 10.0, OSX 10.13, watchOS 4.0, *)
+    @available(iOS 10.0, *)
     public func addAndSetupAccessories() -> Promise<[HMAccessory]> {
         // We need to compare what we have before the action to after to know what is new
         let beforeAccessories = self.accessories
@@ -39,20 +35,22 @@ extension HMHome {
             }
         }
     }
-#endif
 
+    @available(iOS 8.0, *)
     public func addAccessory(_ accessory: HMAccessory) -> Promise<Void> {
         return Promise { seal in
             self.addAccessory(accessory, completionHandler: seal.resolve)
         }
     }
     
+    @available(iOS 8.0, *)
     public func assignAccessory(_ accessory: HMAccessory, to room: HMRoom) -> Promise<Void> {
         return Promise { seal in
             self.assignAccessory(accessory, to: room, completionHandler: seal.resolve)
         }
     }
     
+    @available(iOS 8.0, *)
     public func removeAccessory(_ accessory: HMAccessory) -> Promise<Void> {
         return Promise { seal in
             self.removeAccessory(accessory, completionHandler: seal.resolve)
@@ -62,12 +60,14 @@ extension HMHome {
     /**
         Rooms
     */
+    @available(iOS 8.0, *)
     public func addRoom(withName name: String) -> Promise<HMRoom> {
         return Promise { seal in
             self.addRoom(withName: name, completionHandler: seal.resolve)
         }
     }
     
+    @available(iOS 8.0, *)
     public func removeRoom(_ room: HMRoom) -> Promise<Void> {
         return Promise { seal in
             self.removeRoom(room, completionHandler: seal.resolve)

@@ -11,18 +11,21 @@ extension HMHomeManager {
         return HMHomeManagerProxy().promise
     }
     
+    @available(iOS 8.0, *)
     public func addHome(withName name: String) -> Promise<HMHome> {
         return Promise { seal in
             self.addHome(withName: name, completionHandler: seal.resolve)
         }
     }
     
+    @available(iOS 8.0, *)
     public func removeHome(_ home: HMHome) -> Promise<Void> {
         return Promise { seal in
             self.removeHome(home, completionHandler: seal.resolve)
         }
     }
     
+    @available(iOS 8.0, *)
     public func updatePrimaryHome(_ home: HMHome) -> Promise<Void> {
         return Promise { seal in
             self.updatePrimaryHome(home, completionHandler: seal.resolve)
