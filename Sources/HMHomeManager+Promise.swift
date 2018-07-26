@@ -2,10 +2,12 @@ import Foundation
 import PromiseKit
 import HomeKit
 
+@available(iOS 8.0, tvOS 10.0, *)
 public enum HomeKitError: Error {
     case permissionDeined
 }
 
+@available(iOS 8.0, tvOS 10.0, *)
 extension HMHomeManager {
     public func homes() -> Promise<[HMHome]> {
         return HMHomeManagerProxy().promise
@@ -37,6 +39,7 @@ extension HMHomeManager {
     #endif
 }
 
+@available(iOS 8.0, tvOS 10.0, *)
 internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate {
     
     fileprivate let manager: HMHomeManager

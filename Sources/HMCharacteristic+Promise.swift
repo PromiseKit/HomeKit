@@ -8,6 +8,7 @@ public enum AccessoryError: Error {
     case characteristicMissing
 }
 
+@available(iOS 8.0, tvOS 10.0, *)
 extension HMCharacteristic {
     /**
         A simple typesafe promise wrapper around readValue
