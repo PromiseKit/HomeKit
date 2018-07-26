@@ -15,15 +15,8 @@ github "PromiseKit/HomeKit" ~> 1.0
 The extension is built into it's own framework:
 
 ```swift
-// swift
 import PromiseKit
 import PMKHomeKit
-```
-
-```objc
-// objc
-@import PromiseKit;
-@import PMKHomeKit;
 ```
 
 
