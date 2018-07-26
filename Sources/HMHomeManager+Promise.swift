@@ -11,6 +11,8 @@ extension HMHomeManager {
         return HMHomeManagerProxy().promise
     }
     
+    #if !os(tvOS) && !os(watchOS)
+
     @available(iOS 8.0, *)
     public func addHome(withName name: String) -> Promise<HMHome> {
         return Promise { seal in
@@ -31,6 +33,8 @@ extension HMHomeManager {
             self.updatePrimaryHome(home, completionHandler: seal.resolve)
         }
     }
+    
+    #endif
 }
 
 internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate {

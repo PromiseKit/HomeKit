@@ -2,8 +2,11 @@ import Foundation
 import HomeKit
 import PromiseKit
 
+#if !os(tvOS) && !os(watchOS)
+
 extension HMHome {
     
+    @available(iOS 8.0, *)
     public func updateName(_ name: String) -> Promise<Void> {
         return Promise { seal in
             self.updateName(name, completionHandler: seal.resolve)
@@ -74,3 +77,4 @@ extension HMHome {
         }
     }
 }
+#endif

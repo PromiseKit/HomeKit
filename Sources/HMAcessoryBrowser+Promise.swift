@@ -2,6 +2,8 @@ import Foundation
 import HomeKit
 import PromiseKit
 
+#if !os(tvOS) && !os(watchOS)
+
 public enum HMPromiseAccessoryBrowserError: Error {
     case noAccessoryFound
 }
@@ -70,3 +72,5 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
         }
     }
 }
+
+#endif
