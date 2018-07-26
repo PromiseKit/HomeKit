@@ -9,7 +9,7 @@ Not currently available
 ## Carthage
 
 ```ruby
-github "chrischares/PromiseKit-HomeKit" ~> 1.0
+github "PromiseKit/HomeKit" ~> 1.0
 ```
 
 The extension is built into it's own framework:
