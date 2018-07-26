@@ -66,7 +66,7 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
     */
     func accessoryBrowser(_ browser: HMAccessoryBrowser, didFindNewAccessory accessory: HMAccessory) {
         if case .returnFirst = scanInterval {
-            fulfill(browser.discoveredAccessories)
+            fulfill([accessory])
         }
     }
 }

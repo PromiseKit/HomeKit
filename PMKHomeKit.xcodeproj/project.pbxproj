@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		63C7FFF71D5C020D003BAE60 /* PMKHomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C7FFA71D5BEE09003BAE60 /* PMKHomeKit.framework */; };
+		8312EA1521096DF000A47DDF /* HMAccessoryBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EA1421096DF000A47DDF /* HMAccessoryBrowserTests.swift */; };
+		8312EA19210974F600A47DDF /* UtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8312EA18210974F600A47DDF /* UtilsTests.swift */; };
 		838C29D32103FB9700CE5309 /* HMAcessoryBrowser+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CE2103FB9600CE5309 /* HMAcessoryBrowser+Promise.swift */; };
 		838C29D42103FB9700CE5309 /* HMHome+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */; };
 		838C29D52103FB9700CE5309 /* HMCharacteristic+Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838C29D02103FB9700CE5309 /* HMCharacteristic+Promise.swift */; };
@@ -31,6 +33,8 @@
 		63C7FFF21D5C020D003BAE60 /* PMKHKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PMKHKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CCF8121D5C0C4E00503216 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		63CCF8171D5C11B500503216 /* Carthage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Carthage.xcconfig; sourceTree = "<group>"; };
+		8312EA1421096DF000A47DDF /* HMAccessoryBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAccessoryBrowserTests.swift; sourceTree = "<group>"; };
+		8312EA18210974F600A47DDF /* UtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilsTests.swift; sourceTree = "<group>"; };
 		838C29CE2103FB9600CE5309 /* HMAcessoryBrowser+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMAcessoryBrowser+Promise.swift"; sourceTree = "<group>"; };
 		838C29CF2103FB9700CE5309 /* HMHome+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMHome+Promise.swift"; sourceTree = "<group>"; };
 		838C29D02103FB9700CE5309 /* HMCharacteristic+Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HMCharacteristic+Promise.swift"; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		63C7FFF31D5C020D003BAE60 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8312EA1421096DF000A47DDF /* HMAccessoryBrowserTests.swift */,
+				8312EA18210974F600A47DDF /* UtilsTests.swift */,
 			);
 			path = Tests;
 			sourceTree = SOURCE_ROOT;
@@ -162,7 +168,7 @@
 					};
 					63C7FFF11D5C020D003BAE60 = {
 						CreatedOnToolsVersion = 8.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -220,6 +226,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8312EA1521096DF000A47DDF /* HMAccessoryBrowserTests.swift in Sources */,
+				8312EA19210974F600A47DDF /* UtilsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
