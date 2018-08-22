@@ -2,6 +2,11 @@
 
 This project adds promises to Apple’s HomeKit framework.
 
+* Xcode >= 9.3 required for iOS
+* Xcode >= 9.0 required for all other platforms
+
+Thus, Swift versions supported are: 3.2, 3.3, 3.4, 4.0, 4.1 & 4.2.
+
 ## CocoaPods
 
 Not currently available
