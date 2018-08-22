@@ -11,6 +11,8 @@ import PromiseKit
 import HomeKit
 @testable import PMKHomeKit
 
+#if os(iOS)
+
 class HMAccessoryBrowserTests: XCTestCase {
     
     func testBrowserScanReturningFirst() {
@@ -78,3 +80,5 @@ func swizzle(_ foo: AnyClass, _ from: Selector, isClassMethod: Bool = false, bod
     body()
     method_exchangeImplementations(swizzledMethod, originalMethod)
 }
+
+#endif
