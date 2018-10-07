@@ -24,6 +24,7 @@ public class HMPromiseAccessoryBrowser {
 private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDelegate {
     let browser = HMAccessoryBrowser()
     let scanInterval: ScanInterval
+    var timer: CancellablePromise<Void>?
     
     init(scanInterval: ScanInterval) {
         self.scanInterval = scanInterval
@@ -40,7 +41,7 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
         }
         
         if let timeout = timeout {
-            after(seconds: timeout)
+            self.timer = cancellable(after(seconds: timeout))
             .done { [weak self] () -> Void in
                 guard let _self = self else { return }
                 _self.reject(HMPromiseAccessoryBrowserError.noAccessoryFound)
@@ -60,6 +61,7 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
     
     override func cancel() {
         browser.stopSearchingForNewAccessories()
+        timer?.cancel()
         super.cancel()
     }
     
@@ -74,3 +76,11 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
 }
 
 #endif
+
+//////////////////////////////////////////////////////////// Cancellable wrapper
+
+extension HMPromiseAccessoryBrowser {
+    public func cancellableStart(scanInterval: ScanInterval) -> CancellablePromise<[HMAccessory]> {
+        return cancellable(start(scanInterval: scanInterval))
+    }
+}

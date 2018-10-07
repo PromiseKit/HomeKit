@@ -46,7 +46,7 @@ extension HMAccessoryBrowser {
     @objc func pmk_startSearchingForNewAccessories() {
         after(.milliseconds(100))
         .done { swag in
-            self.delegate!.accessoryBrowser?(self, didFindNewAccessory: MockAccessory())
+            self.delegate?.accessoryBrowser?(self, didFindNewAccessory: MockAccessory())
         }
     }
 }
@@ -79,6 +79,38 @@ func swizzle(_ foo: AnyClass, _ from: Selector, isClassMethod: Bool = false, bod
     method_exchangeImplementations(originalMethod, swizzledMethod)
     body()
     method_exchangeImplementations(swizzledMethod, originalMethod)
+}
+
+//////////////////////////////////////////////////////////// Cancellation
+
+extension HMAccessoryBrowserTests {
+    
+    func testCancelBrowserScanReturningFirst() {
+        swizzle(HMAccessoryBrowser.self, #selector(HMAccessoryBrowser.startSearchingForNewAccessories)) {
+            let ex = expectation(description: "")
+            
+            cancellable(HMPromiseAccessoryBrowser().start(scanInterval: .returnFirst(timeout: 0.5)))
+            .done { accessories in
+                XCTAssertEqual(accessories.count, 1)
+                XCTFail()
+            }.catch(policy: .allErrors) {
+                $0.isCancelled ? ex.fulfill() : XCTFail()
+            }.cancel()
+            
+            waitForExpectations(timeout: 1, handler: nil)
+        }
+    }
+    
+    func testCancelBrowserScanReturningTimeout() {
+        let ex = expectation(description: "")
+        
+        cancellable(HMPromiseAccessoryBrowser().start(scanInterval: .returnFirst(timeout: 0.5)))
+        .catch(policy: .allErrors) {
+            $0.isCancelled ? ex.fulfill() : XCTFail()
+        }.cancel()
+        
+        waitForExpectations(timeout: 1, handler: nil)
+    }
 }
 
 #endif

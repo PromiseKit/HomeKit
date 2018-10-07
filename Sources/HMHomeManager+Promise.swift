@@ -43,18 +43,34 @@ extension HMHomeManager {
 internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate {
     
     fileprivate let manager: HMHomeManager
+    private var task: DispatchWorkItem!
 
     override init() {
         self.manager = HMHomeManager()
         super.init()
         self.manager.delegate = self
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0) { [weak self] in
+        self.task = DispatchWorkItem { [weak self] in
             self?.reject(HomeKitError.permissionDeined)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20.0, execute: self.task)
     }
     
     func homeManagerDidUpdateHomes(_ manager: HMHomeManager) {
         fulfill(manager.homes)
+    }
+
+    override func cancel() {
+        self.task.cancel()
+        super.cancel()
+    }
+}
+
+//////////////////////////////////////////////////////////// Cancellable wrapper
+
+@available(iOS 8.0, tvOS 10.0, *)
+extension HMHomeManager {
+    public func cancellableHomes() -> CancellablePromise<[HMHome]> {
+        return cancellable(homes())
     }
 }
