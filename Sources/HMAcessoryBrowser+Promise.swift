@@ -75,8 +75,6 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
     }
 }
 
-#endif
-
 //////////////////////////////////////////////////////////// Cancellable wrapper
 
 extension HMPromiseAccessoryBrowser {
@@ -84,3 +82,5 @@ extension HMPromiseAccessoryBrowser {
         return cancellable(start(scanInterval: scanInterval))
     }
 }
+
+#endif
