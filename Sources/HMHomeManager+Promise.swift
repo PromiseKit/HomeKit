@@ -9,6 +9,8 @@ public enum HomeKitError: Error {
 
 @available(iOS 8.0, tvOS 10.0, *)
 extension HMHomeManager {
+    /// - Note: cancelling this promise will cancel the underlying task
+    /// - SeeAlso: [Cancellation](http://promisekit.org/docs/)
     public func homes() -> Promise<[HMHome]> {
         return HMHomeManagerProxy().promise
     }
@@ -63,14 +65,5 @@ internal class HMHomeManagerProxy: PromiseProxy<[HMHome]>, HMHomeManagerDelegate
     override func cancel() {
         self.task.cancel()
         super.cancel()
-    }
-}
-
-//////////////////////////////////////////////////////////// Cancellable wrapper
-
-@available(iOS 8.0, tvOS 10.0, *)
-extension HMHomeManager {
-    public func cancellableHomes() -> CancellablePromise<[HMHome]> {
-        return cancellable(homes())
     }
 }

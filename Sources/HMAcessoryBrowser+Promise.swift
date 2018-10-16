@@ -11,6 +11,8 @@ public enum HMPromiseAccessoryBrowserError: Error {
 public class HMPromiseAccessoryBrowser {
     private var proxy: BrowserProxy?
 
+    /// - Note: cancelling this promise will cancel the underlying task
+    /// - SeeAlso: [Cancellation](http://promisekit.org/docs/)
     public func start(scanInterval: ScanInterval) -> Promise<[HMAccessory]> {
         proxy = BrowserProxy(scanInterval: scanInterval)
         return proxy!.promise
@@ -72,14 +74,6 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
         if case .returnFirst = scanInterval {
             fulfill([accessory])
         }
-    }
-}
-
-//////////////////////////////////////////////////////////// Cancellable wrapper
-
-extension HMPromiseAccessoryBrowser {
-    public func cancellableStart(scanInterval: ScanInterval) -> CancellablePromise<[HMAccessory]> {
-        return cancellable(start(scanInterval: scanInterval))
     }
 }
 
