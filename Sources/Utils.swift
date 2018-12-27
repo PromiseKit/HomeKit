@@ -5,7 +5,9 @@ import PromiseKit
 /**
     Commonly used functionality when promisifying a delegate pattern
 */
-internal class PromiseProxy<T>: NSObject {
+internal class PromiseProxy<T>: NSObject, CancellableTask {
+    var isCancelled = false
+    
     internal let (promise, seal) = Promise<T>.pending();
     
     private var retainCycle: PromiseProxy?
@@ -15,7 +17,9 @@ internal class PromiseProxy<T>: NSObject {
         // Create a retain cycle
         self.retainCycle = self
         // And ensure we break it when the promise is resolved
-        _ = promise.ensure { self.retainCycle = nil }
+        _ = promise.ensure { self.retainCycle = nil ; self.promise.setCancellableTask(nil) }
+        
+        promise.setCancellableTask(self)
     }
     
     /// These functions ensure we only resolve the promise once
@@ -30,6 +34,7 @@ internal class PromiseProxy<T>: NSObject {
     
     /// Cancel helper
     internal func cancel() {
+        isCancelled = true
         self.reject(PMKError.cancelled)
     }
 }

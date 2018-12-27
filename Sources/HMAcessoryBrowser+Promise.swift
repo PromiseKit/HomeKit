@@ -13,6 +13,8 @@ public enum HMPromiseAccessoryBrowserError: Error {
 public class HMPromiseAccessoryBrowser {
     private var proxy: BrowserProxy?
 
+    /// - Note: cancelling this promise will cancel the underlying task
+    /// - SeeAlso: [Cancellation](http://promisekit.org/docs/)
     public func start(scanInterval: ScanInterval) -> Promise<[HMAccessory]> {
         proxy = BrowserProxy(scanInterval: scanInterval)
         return proxy!.promise
@@ -26,6 +28,7 @@ public class HMPromiseAccessoryBrowser {
 private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDelegate {
     let browser = HMAccessoryBrowser()
     let scanInterval: ScanInterval
+    var timer: CancellablePromise<Void>?
     
     init(scanInterval: ScanInterval) {
         self.scanInterval = scanInterval
@@ -42,7 +45,7 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
         }
         
         if let timeout = timeout {
-            after(seconds: timeout)
+            self.timer = cancellable(after(seconds: timeout))
             .done { [weak self] () -> Void in
                 guard let _self = self else { return }
                 _self.reject(HMPromiseAccessoryBrowserError.noAccessoryFound)
@@ -62,6 +65,7 @@ private class BrowserProxy: PromiseProxy<[HMAccessory]>, HMAccessoryBrowserDeleg
     
     override func cancel() {
         browser.stopSearchingForNewAccessories()
+        timer?.cancel()
         super.cancel()
     }
     
