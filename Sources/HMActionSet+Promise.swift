@@ -14,6 +14,13 @@ extension HMActionSet {
             self.addAction(action, completionHandler: seal.resolve)
         }
     }
+    
+    @available(iOS 8.0, *)
+    public func removeAction(_ action: HMAction) -> Promise<Void> {
+        return Promise { seal in
+            self.removeAction(action, completionHandler: seal.resolve)
+        }
+    }
 
     @available(iOS 8.0, *)
     public func updateName(_ name: String) -> Promise<Void> {
